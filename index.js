@@ -51,13 +51,13 @@ const seedDatabase = async () => {
   }
 };
 
-app.listen(PORT, async () => {
-  console.log(`Servidor escuchando en http://localhost:${PORT}`);
+app.listen(PORT, "0.0.0.0", async () => {
+  console.log(`Servidor escuchando en http://0.0.0.0:${PORT}`);
   // Poblar la BD solo si está vacía
   const [rows] = await pool.query("SELECT COUNT(*) AS count FROM usuarios");
   if (rows[0].count === 0) {
     await seedDatabase();
   } else {
-    console.log("ℹ️ La BD ya tiene datos");
+    console.log("ℹ️ La BD ya tiene datoss");
   }
 });
