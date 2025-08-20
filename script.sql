@@ -1,5 +1,3 @@
-drop database gestion_reservas;
-
 -- ============================================
 -- CREACIÓN DE BASE DE DATOS
 -- ============================================
@@ -65,6 +63,3 @@ CREATE TABLE notificaciones (
     FOREIGN KEY (id_reserva) REFERENCES reservas(id_reserva) ON DELETE CASCADE
 );
 
-show tables;
-
-select * from usuarios;
