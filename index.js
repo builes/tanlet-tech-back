@@ -6,6 +6,7 @@ import path from "path";
 
 import authRoutes from "./routes/auth.routes.js";
 import operacionRoutes from "./routes/servicio.routes.js";
+import reservaRoutes from "./routes/reserva.routes.js";
 
 const app = express();
 const PORT = 3000;
@@ -16,6 +17,7 @@ app.use(cors());
 //Rutas
 app.use("/api/auth", authRoutes);
 app.use("/api/servicios", operacionRoutes);
+app.use("/api/reservas", reservaRoutes);
 
 // Ruta de prueba de conexión
 app.get("/test-db", async (req, res) => {
